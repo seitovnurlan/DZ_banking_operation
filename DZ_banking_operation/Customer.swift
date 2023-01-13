@@ -4,12 +4,12 @@
 import Foundation
 
 class Customer {
-    var firstName: String = ""       //Имя
-    var lastName: String = ""        //Фамилия
-    var middleName: String = ""      //Отчество
-    var creditAmount: Double = 0.0   //Cумма кредита
-    var creditPeriod: Int = 0        //Cрок кредита
-    var repaymentAmount: Double = 0.0 //Cумма погашения
+    var firstName: String       //Имя
+    var lastName: String        //Фамилия
+    var middleName: String     //Отчество
+    var creditAmount: Double   //Cумма кредита
+    var creditPeriod: Int      //Cрок кредита
+    var repaymentAmount: Double  //Cумма погашения
     
     init(firstName: String, lastName: String, middleName: String, creditAmount: Double, creditPeriod: Int, repaymentAmount: Double) {
         self.firstName = firstName
