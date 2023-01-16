@@ -12,36 +12,19 @@
 
 import Foundation
 
-//var person1 = Customer(firstName: "Ivan", lastName: "Ivanov", middleName: "Ivanovich", creditAmount: 50000.0, creditPeriod: 12, repaymentAmount: 0.0)
-//var person2 = Customer(firstName: "Peter", lastName: "Petrov", middleName: "Petrovich", creditAmount: 100000.0, creditPeriod: 12, repaymentAmount: 0.0)
-//
-//var bank = Bank1()
-//
-//bank.customers.append(person1)
-//bank.customers.append(person2)
-//
-//for i in bank.customers {
-//    i.showInfo()
-//}
-//
-//bank.calculate_loan(period: 36, sum: 100000.0)
-var person = Customer(firstName: "Sadf", lastName: "sdf", middleName: "dsf", creditAmount: 0.0, creditPeriod: 0, repaymentAmount: 0.0)
-var bank = Bank1()
-bank.clients.append(person)
-bank.client(person: person, pogashenie: 1000)
-bank.countCredit(summaCredita: 1000.0, srokCredita: 2, summaPogashenie: 1000.0)
+var person1 = Customer(firstName: "Иван", lastName: "Иванов", middleName: "Иванович", creditAmount: 10000.0, creditPeriod: 1, repaymentAmount: 0.0)
+var person2 = Customer(firstName: "Петр", lastName: "Петров", middleName: "Петрович", creditAmount: 50000.0, creditPeriod: 2, repaymentAmount: 0.0)
+var person3 = Customer(firstName: "Сергей", lastName: "Сидоров", middleName: "Сидорович", creditAmount: 100000.0, creditPeriod: 3, repaymentAmount: 0.0)
 
-bank.print_graph(person: person, srok: 2)
-func plus() {
-    
-}
-//func plus1(sad:Int) {
-//    
-//}
-//var name = "sdfs"
-//func plus2(dsad:Int) -> String {
-//    if dsad == 100 {
-//        return name 
-//        }
-//    }
-//}
+var bank = Bank()
+bank.clients.append(person1)
+bank.clients.append(person2)
+bank.clients.append(person3)
+
+//bank.listOfClient() // Выводить список клиентов
+
+bank.countCredit() // Функцию, рассчитывающая сумму кредита с процентами
+
+bank.print_graph("Иванов")
+bank.print_graph("Петров")
+bank.print_graph("Сидоров")
